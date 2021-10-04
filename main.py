@@ -61,7 +61,7 @@ def count_down(count):
     canvas.itemconfig(timer_text, text=f"{count_min}:{str(count_sec).zfill(2)}")
     if count > 0:
         global timer
-        timer = window.after(1, count_down, count - 1)
+        timer = window.after(1000, count_down, count - 1)
     elif reps % 2 == 0:
         start_timer()
         marks = ""
